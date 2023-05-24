@@ -1,0 +1,55 @@
+{% extends './layout.html' %}
+{% block title %}
+{{data.titulo}}
+{% endblock %}
+
+{% block body %}
+<nav>
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox" class="checkbtn">
+        <span class="material-symbols-outlined">
+            menu
+        </span>               
+    </label>
+    <a href="#" class="enlace">
+        <img src="..\static\img\logo.jpg" class="logo" alt="">
+    </a>
+    <ul>
+        <li><a href="#" class="active">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</nav>
+
+<h1>{{data.bienvenida}}</h1>
+<div class="num">
+    <img src="..\static\img\uno.jpg" alt="">
+</div>
+<div class="galeria">
+    <div class="foto">
+        <img src="..\static\img\hammer.jpg" alt="">
+        <div class="pie">
+            <p>Hummer H3 4x4</p>
+            <button class="btn_ir" onclick="location.href='/sorteo1'">Ir</button>
+        </div>
+    </div>
+</div>
+
+<div class="num">
+    <img src="..\static\img\dos.jpg" alt="">
+</div>
+ 
+<div class="galeria">
+    <div class="foto">
+        <img  src="..\static\img\equinox.jpg" alt="">
+        <div class="pie">
+            <p>Equinox RS 2023</p>
+            <button class="btn_ir" onclick="location.href='/sorteo2'">Ir</button>
+        </div>
+    </div>
+</div>   
+
+
+
+
+{% endblock %}

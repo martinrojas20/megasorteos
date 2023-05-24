@@ -1,0 +1,115 @@
+{% extends './layout.html' %}
+{% block title %}
+{{data.titulo}}
+
+{% endblock %}
+
+{% block body %}
+
+<h1>{{data.bienvenida}}</h1>
+<div class="slider">
+    <ul>
+        <li><img src="../static/img/equinox1.jpg" alt=""></li>
+        <li><img src="../static/img/equinox2.jpg" alt=""></li>
+        <li><img src="../static/img/equinox3.jpg" alt=""></li>
+        <li><img src="../static/img/equinox11.jpg" alt=""></li>
+    </ul>    
+</div>
+<br>
+<br>
+<div class="ficha">
+    <br><br>
+    <p><strong><h2>Ficha Técnica</h2></strong> <br>
+        <strong>Modelo:</strong> BMW X1 U11<br>
+        <strong>Motor:</strong> B38A15M1 Turbo tres cilindros, 1.5 litros, 12 válvulas VALVETRONIC<br>
+        <strong>Potencia:</strong> 156 caballos @ 4.400-6.500 rpm<br>
+        <strong>Torque:</strong> 230 Nm @ 1.500-4.000 rpm<br>
+        <strong>Transmisión:</strong> Automática de siete velocidades<br>
+        <strong>Tracción:</strong> Delantera<br>
+        <strong>Origen:</strong> Alemania<br>
+        <strong>Precio (Septiembre/2022): $194.900.000</strong><br>
+        <br>
+        </p> 
+        <br>
+        <br>
+          
+</div>
+<br>
+<br>
+<br><br>
+
+<h2 class="vi">Video</h2>
+<br>
+<div class="video">
+<video width=500  height=350 controls poster="vistaprevia.jpg" autoplay muted>
+    <source src="../static/vid/equinox.mp4" type="video/mp4">
+</video>
+</div>
+<br>
+<br><br>
+
+    <div class="instrucciones">
+           
+       <p class="inst"> 
+            1. Realizar el registro debidamente en el formulario a continuación. <br>
+            2. a - COMPRAR UN NÚMERO: Debes buscarlo para conocer si esta disponible . <br> 
+            &nbsp &nbsp b - GENERAR NÚMEROS ALEATORIAMENTE: Introducir documento <br>
+            &nbsp &nbsp  &nbsp &nbsp y la cantidad de números a comprar en el formulario correspondiente. <br>         
+            3. Realizar el pago, suministrando los datos solicitados en la plataforma. <br>
+            4. Una véz finalizado el pago con exito, hacer click en el link volver, para finalizar el proceso.<br>        
+        </p>
+        <br>
+        <br>
+    </div>
+    <section class="f-registro">
+        <h4>Formulario de Registro</h4>
+        <form action="/add_registro2" method="POST" > 
+            <input class="controls" type="text" name="documento" id="documento" placeholder="Documento">               
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombres">
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+            <input class="controls" type="email" name="email" id="email" placeholder="Email">
+            <input class="controls" type="text" name="telefono" id="telefono" placeholder="Telefóno">            
+            <p>Estoy de acuerdo con:  <a href="#">Terminos y Condiciones</a></p>  
+            <button class="boton" id="btnregistrar" >Registrar</button>        
+        </form> 
+    </section>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <p class="message">{{message}}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+{% if numeros %}
+<h3 class="h4f">Comprar Un Número</h3>
+<section class="cantidad-n">
+    <form action="" id="form_buscar"> 
+              
+       <input class="controls" type="text" name="numero" id="numero" placeholder="Número a buscar" required>
+       <input class="controls" type="text" name="documento" id="document_n" placeholder="Documento">                              
+       <input  type="submit" class="boton" id="btn_buscar" onclick="enviar_num2()" value="Buscar"></input>
+               
+    </form>      
+</section>
+
+
+
+<h3 class="h4f">Genere Tus Números </h3>
+<section class="cantidad-n">    
+     <form action="" id="form_pago"> 
+        <input class="controls" type="text" name="documento" id="document" placeholder="Documento">       
+        <input class="controls" type="text" name="cantidad" id="cant" placeholder="Cantidad de numeros a comprar" required>                              
+        <input  type="submit" class="boton" id="btn_enviar" onclick="g2({{numeros}})"  value="Generar"></input>        
+</form>      
+</section>
+{% endif %}
+<br>
+<br>
+
+<div class="whatsapp">    
+    <a href="https://api.whatsapp.com/send?phone=573227286589" target="_blank">
+    <img src="../static/img/whatsapp.png" class="what">
+</div>
+
+{% endblock %}

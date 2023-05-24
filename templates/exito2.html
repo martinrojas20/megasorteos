@@ -1,0 +1,13 @@
+{% extends './layout.html' %}
+{% block body %}
+<h1>¡ GRACIAS POR TU COMPRA!</h1>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<p class="message">{{message}}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+   
+{% endblock %}

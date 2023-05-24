@@ -1,0 +1,29 @@
+{% extends './layout.html' %}
+{% block body %}
+<body>
+    <h1>Realiza tu Pago</h1>
+    
+    <section class="rectangulo">
+    
+      <textarea name="textarea" rows="10" cols="42" id="num" >{{numeros}}</textarea>     
+            
+      <div class="btn-pagar"></div>
+    </section>
+    <script>
+        const mp = new MercadoPago('TEST-592cc591-b26b-4b93-bfcc-5c7c08246b0f', {
+          locale: 'es-CO'
+        });
+      
+        mp.checkout({
+          preference: {
+            id: '{{id}}'
+          },
+          render: {
+            container: '.btn-pagar',
+            label: 'Pagar',
+          }
+        });
+       
+    </script> 
+
+{% endblock %}

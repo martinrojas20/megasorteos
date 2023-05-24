@@ -1,0 +1,429 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+nav{
+    position: fixed;    
+    background-color: #000000;
+    height: 80px;
+    width: 100%;    
+    top: 0;
+    left: 0;
+}
+.enlace{   
+    position: absolute;
+    padding: 4px 50px;
+}
+.logo{
+    height: 70px;
+    width: 100px;
+    border-radius: 8px;
+}
+nav ul{   
+    float: right;
+    margin-right: 20px;  
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{      
+    color: #5214b4;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    width: max-content;
+}
+li a.active, li a:hover{
+    background: #2b2a29;
+    transition: .2s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #5214b4;
+    float: right;
+    line-height: 80px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none;
+}
+#checkbox{
+    display: none;
+}
+body {
+background-color: #000000;
+padding: 60px 20px 0px;
+}
+
+h1{
+    padding: 90px 20px 0px;
+    color: #B7950B;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.pie p{
+    color: #B7950B;
+}
+.btn_ir{
+    background-color:#f50606;
+    color: white;
+    padding: 8px;
+    margin-top: 10px;
+    width: 140px;
+    height: 34px;
+}
+
+
+.galeria{
+    border-radius: 10px;
+   
+}
+.galeria.foto{
+    border-radius: 8px;
+}
+
+
+
+@media(max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;        
+    }
+}
+
+@media(max-width: 768px){
+    .checkbtn{
+        display: block;
+    }    
+    ul {
+        position: fixed;
+        width: 100%;   
+        height: 100%;
+        background: #48494b;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .2s;
+        height: calc(100% -60px);
+        overflow-y: auto;
+        
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+       
+    }
+
+    nav ul li a{
+        font-size: 20px;
+        color: azure;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: bisque;
+    }
+    #checkbox:checked ~ul{
+        left: 0;
+    }
+
+    h1{
+        
+        color: #fdf906;
+        text-align: center;
+    }
+}
+
+div.galeria{    
+    margin: 100px 30px;
+    box-shadow: 0 8px 4px 0 lightslategray, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+     
+}
+
+.num{
+    margin: 250px 30px;
+    float: left;
+}
+div.foto img{
+    width: 400px;
+    height: 720px;
+    margin: 0 auto;
+}
+.reglamento{
+    width: 400px;
+    height: 700px;
+}
+.texto{
+    color: #e7e302;
+}
+
+.pie{
+    text-align: center;
+    text-shadow: 2px 2px 2px purple;
+    height: 80px;
+}
+
+.vi{
+    text-align: center;
+    color: white;
+}
+.video{
+    width: 500px;
+    height: 354px;
+    border: #e7e302 2px solid;
+    margin: 0 auto;
+}
+
+
+
+div.galeria:hover{
+    border: 1px solid lightskyblue;
+    transform: rotate(-2deg);
+    
+}
+
+
+
+.ficha{
+    color: white;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(97, 3, 247);
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.description{
+    margin-top: 160px;
+    color: white;
+}
+
+.slider{       
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul{
+    margin-top: 4%; 
+    padding: 0;
+    display: flex;
+    width: 400%;
+
+    animation: slid 8s infinite alternate step-start;    
+    
+}
+
+.slider li{
+    list-style: none;
+    width: 100%;
+}
+
+.slider img{
+    width: 100%;
+    height: 500px;
+}
+
+
+.message{
+    color: rgb(251, 255, 0);
+    margin-top: 50px;
+    margin-left: 750px;
+}
+
+.prueba p{
+    color: #f3dc09;
+}
+
+
+
+.instrucciones{
+    margin-top: 20px;
+    color: white;     
+    margin: 0 auto;  
+    display: flex;
+    justify-content: center;
+}
+
+.inst{
+    text-align: justify;
+}
+
+.tiulo{
+    text-align: center;
+}
+
+
+
+
+.cantidad-n{
+    background-color: #f3dc09;
+    width: 400px;
+    padding: 40px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #5f5d5d;
+}
+
+.rectangulo{
+    width: 500px;
+    height: 300px;
+    border-color: #B7950B;
+    background-color: #e7e302;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+
+.rectangulo textarea{
+    margin-top: 50px;
+    margin-left: 100px;
+   
+}
+.exito{
+    background-color: #3cd863;
+}
+
+.number{
+    margin-left: 80px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.mensj{
+    color: #f3dc09;
+}
+
+.btn-pagar{
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.h4f{
+    margin-top: 30px;
+    color: white;
+    margin-left: 45%;
+  }
+
+@keyframes slid {
+    0% {margin-left: 0;}
+    25% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+.f-registro{
+    background-color: #8845f5;
+    width: 400px;
+    padding: 40px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.f-registro h4{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.controls{
+    width: 100%;
+    padding: 10px;
+    height: 30px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(97, 81, 10);
+}
+
+.form_registro p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;    
+}
+
+.form_registro a:hover{
+    color:white;
+    text-decoration: underline;
+
+}
+
+.boton{
+    width: 100%;
+    background-color: #5214b4;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 20px 0;
+    font-size: 16px;
+    box-shadow: 3px 7px 31px #281146;
+    cursor: pointer;
+}
+
+.whatsapp{
+    background-color: #3cd863;
+    border: 1px solid white;
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 25px;
+    padding: 25px;
+    transition: ease 0.3s;
+    animation: efecto 1.2s infinite;
+}
+
+.whatsapp:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    
+}
+
+.whatsapp a{
+    color: white;
+    size: 14px;
+}
+
+.what{
+    width: 40px;
+    transition: ease 1s;
+    border-radius: 50%;
+}
+
+@keyframes efecto{
+    0%{
+         box-shadow: 0 0 0 0 rgba(248, 211, 3, 0.733);
+    }
+    100%{
+        box-shadow: 0 0 0 25px rgba(252, 252, 252, 0);
+    }
+}
+
