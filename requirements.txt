@@ -45,7 +45,7 @@ pure-eval==0.2.2
 Pygments==2.14.0
 PyMySQL==1.0.2
 
-pywin32==304
+pywin32==223
 pyzmq==25.0.0
 requests==2.28.2
 sentry-sdk==1.19.1
